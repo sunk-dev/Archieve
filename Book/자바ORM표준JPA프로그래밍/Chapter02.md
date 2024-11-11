@@ -3,7 +3,7 @@
 - Eclipse IDE for JAVA EE Developers 패키지로 내려받는 걸  권장함.
 - 이 패키지로 사용하면 JPA로 개발할 때 편리한 도구들이 지원됨.
 - [이클립스 다운 경로](https://www.eclipse.org/downloads/packages/)
-![img_3.png](img_3.png)
+![img_3.png](img/img_3.png)
 
 - 예제 프로젝트 불러오기
 - [예제다운사이트](https://github.com/holyeye/jpabook)
@@ -11,22 +11,22 @@
 **JRE 버전 문제 해결**
 1. JRE가 너무 에전 버전이여서 1.8 이상으로 교체하라는 에러가 뜸
    - 우클릭 -> Properties -> JavaBuildPath-> Libraries 에서 Moudluepath 더블 클릭 -> Alternative JRE에서 버전을 올려줌
-![img_4.png](img_4.png)
+![img_4.png](img/img_4.png)
    - JavaComplie 에서 Compiler compliance level을 Buildpath에서 변경한 버전과 동일한 버전으로 설정해줌.
-![img_5.png](img_5.png)
+![img_5.png](img/img_5.png)
 ## 2.3 H2데이터 베이스 설치
 - [설치 경로](https://www.h2database.com/html/download-archive.html)
 - 책에 있는 버전은 너무 오래 되서 다운 받을 수 없었고 새로운 버전을 다운 받아야 했는데, 이것도 자바 버전에 영향을 받는다.
 - Java 17은 1.4.200과 호환되어 작동 했다.
-![img_6.png](img_6.png)
+![img_6.png](img/img_6.png)
 
 
 - 버전이 맞지 않는 H2 서버 작동시, 터미널에 아래와 같은 문구가 보인다.
-![img_7.png](img_7.png)
+![img_7.png](img/img_7.png)
 - 각자 자바의 컴파일 버전 참고
   - [자바 컴파일 버전 참고 블로그](https://ksabs.tistory.com/185)
 - H2 로그인 화면
-![img_8.png](img_8.png)
+![img_8.png](img/img_8.png)
 
 - 예제 테이블 생성하기
 ```sql
@@ -243,7 +243,7 @@ public class Member {
 - 이처럼 SQL 표준을 지키지 않거나 특정 데이터베이스만의 고유한 기능을 JPA에서는 방언이라 함.
 - 개발자는 JPA가 제공하는 표준 문법에 맞추어 JPA를 사용하면 되고, 특정 데이터베이스에 의존적인 SQL은 데이터베이스 방언이 처리해준다
 - 데이터베이스 방언을 설정하느 방법은 JPA에 표준화 되어있지 않다.
-![img_9.png](img_9.png)
+![img_9.png](img/img_9.png)
 - 대표적인 방언
   - H2: org.hibernate.dialect.H2Dialet
   - 오라클
@@ -252,7 +252,7 @@ public class Member {
 
 ## 2.6 애플리케이션 개발
 ### 2.6.1 엔티티 매니저 설정
-![img_10.png](img_10.png)
+![img_10.png](img/img_10.png)
 - 엔팉 매니저 팩토리 구성
   - JPA를 시작하려면 우선 persisitence.xml 설정 정보를 사용해서 엔티티 매니저 팩토리를 생성해야함.
   - 이때 `Persistence`클래스를 사용하는데, 이 클래스는 엔티티 매니저 팩토리를 생성해서 JPA를 사용할수 있게 준비함.
@@ -356,3 +356,6 @@ public class Member {
   - 데이터베이스 테이블을대상으로 쿼리하는 SQL과 달리 JPQL은 **엔티티 객체** 대상으로 쿼리한다. 즉, 클래스와 필드를 대상으로 쿼리한다.
   - 따라서 JPQL은 데이터베이스 테이블을 전혀 알지 못한다.
   - JPQL을 사용하기 위해, em.createQUery(JPQL,반환타입) 메소드를 실행해서 쿼리 객체를 생성한후, getResultList() 메소드를 호출하면 적절한 SQL을 만들어 데이터를 조회한다.
+## 테스크 코드 작동 시키는 법
+- [에러원인](https://xively.tistory.com/entry/JPA-JPA%EC%82%AC%EC%9A%A9%EC%9D%84-%EC%9C%84%ED%95%9C-persistence-xml-%EC%84%A4%EC%A0%95-%EB%B0%8F-EntityManagerFactory-create-%EC%97%90%EB%9F%AC-%ED%95%B4%EA%B2%B0)
+- [hibernate-commons-annotations과 호환되는 hibernate-core 버전 참고](https://central.sonatype.com/artifact/org.hibernate.common/hibernate-commons-annotations/4.0.5.Final/dependents)

@@ -1,6 +1,6 @@
 # 01 JPA 소개
 ## 1.1 SQL을 직접 다룰 때 발생하는 문제점
-![img.png](img.png)
+![img.png](img/img.png)
 - 자바로 작성한 애플리케이션은 JDBC API를 사용해거 SQL을 데이터 베이스에 전달 해야람.
 
 1. 비슷한 SQL 구문을 반복적으로 작성해야함.
@@ -140,7 +140,7 @@ class MemberService {
 ### JPA란?
 - Java Persistence API 는 자바 진영 ORM 기술 표준이다. 
 - 애플리케이션과 JDBC사이에서 동작한다.
-![img_1.png](img_1.png)
+![img_1.png](img/img_1.png)
 
 ### ORM 이란?
 - Object-Relational Mapping의 약자로 객체와 관계형 데이터 베이스를 매핑한다는 의미이다.
@@ -161,6 +161,6 @@ class MemberService {
 4. 성능
 5. 데이터 접근 추상화와 벤더 독립성
    - 관계형 데이터 베이스는 같은 기능도 벤더마다 사용법이 다른 경우가 많은데 JPA를 사용하면 데이터 베이스를 변경해도 JPA에게 알려주기만 하면 추가적인 작업을 하지 않아도 되어 편리하다.
-   ![img_2.png](img_2.png)
+   ![img_2.png](img/img_2.png)
 
 ## Q&A
