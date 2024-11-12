@@ -127,7 +127,7 @@ member.setUsername("회원1");
 - 그리고 이런 쿼리를 지연 SQL 저장소에 보관하다가 commit 요청이 들어오면 그때 영속성 컨택스트를 플러쉬하려 변경내용을 데이터 베이스에 동기화한후, 쓰기지연 SQL 저장소에 모인 쿼리를 데이터베이스에 보낸다.
 ![img_18.png](img/img_18.png)
 
-### 트랜잭션을 지웧나는 쓰기 지연이 가능한 이유
+### 트랜잭션을 지원하는 쓰기 지연이 가능한 이유
 - 커밋직전에만 데이터베이스에 SQL을 전달하면 되기 때문에 가능하며, 성능 최적화에도 유리함
 
 ## 3.4.3 엔티티 수정
@@ -205,5 +205,18 @@ member.serUsername("changeName"); //반영되지 않음.
 
 ### 3.6.5 병합 : merge()
 - 다시 영속 상태로 변경하기 위한 방법
-- merge() 메소등는 준영속 상태의 엔티티를 받아서 그 정보로 새로운 영속 상태의 엔티티를 반환함.
+- merge() 메소드는 준영속 상태의 엔티티를 받아서 그 정보로 새로운 영속 상태의 엔티티를 반환함.
+- merge() 메소드 정의
+  `public <T> T merge(T entity);`
 
+#### 준영속 병합
+- 다음은 준영속 상태의 엔티티를 영속 상태로 변경하는 예제이다
+```java
+public class ExampleMergeMain{
+    static EntityManagerFactory emf=
+            Persistence.createEntityManagerFacroty("jpabook");
+    public void main(){
+        Member member=createMember("memberA")
+    }
+}
+```
