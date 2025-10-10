@@ -26,3 +26,9 @@ numbers.append(6)
   - %o : 8진수
   - %f : 실수
   - %s : 문자열
+    
+## enumerate()
+## id()
+## filter
+## lambda
+## map
