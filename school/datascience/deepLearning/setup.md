@@ -2,7 +2,7 @@
 
 - tensorflow==2.1
 - konlpy
-- PyKormoran
+- PyKomoran
 - gensim
 - sklearn-> 오류발생시 scikit-learn
 - seqeval
