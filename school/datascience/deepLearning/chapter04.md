@@ -121,7 +121,7 @@ print('5) corpus_toatl_words:{0}'.format(model.corpus_total_words))
     - min_count: 단어 최소 빈도수 제한 설정(설정된 빈도수 이하의 단어들은 학습하지 않음)
     - sg : 0(CBOW모델) ,1 (skip-gram 모델)
 
-  ``` python
+ ``` python
   from gensim.models import Word2Vec
 import os
 this_program_dir=os.path.dirname(os.path.abspath(__file__))
