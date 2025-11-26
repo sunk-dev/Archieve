@@ -82,3 +82,5 @@ VirtualBox 메인 창에서 해당 우분투 가상 머신을 선택한 후, 상
 설정 저장 및 재부팅
 '확인' 버튼을 눌러 설정을 저장합니다.
 이제 가상 머신을 다시 '시작' 버튼을 눌러 부팅합니다.
+## virtualbox 리눅스 설치시 영어
+- VirtualBox에서 'proceed with unattended installation'은 사용자의 수동 개입 없이 운영체제를 자동으로 설치하겠다는 뜻
