@@ -84,3 +84,8 @@ VirtualBox 메인 창에서 해당 우분투 가상 머신을 선택한 후, 상
 이제 가상 머신을 다시 '시작' 버튼을 눌러 부팅합니다.
 ## virtualbox 리눅스 설치시 영어
 - VirtualBox에서 'proceed with unattended installation'은 사용자의 수동 개입 없이 운영체제를 자동으로 설치하겠다는 뜻
+
+## 우분투 Display 설정
+특정 버전 이후는 메모리를 128기가 정도 설정해야 정상적으로 작동함.
+<img width="265" height="88" alt="image" src="https://github.com/user-attachments/assets/8a355727-1761-4443-8910-a7c9acb3414c" />
+
